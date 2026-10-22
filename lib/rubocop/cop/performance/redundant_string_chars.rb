@@ -5,6 +5,12 @@ module RuboCop
     module Performance
       # Checks for redundant `String#chars`.
       #
+      # @safety
+      #   This cop is unsafe because a String subclass can override the methods
+      #   that replace `chars`. For example, `ActiveSupport::SafeBuffer#[]` returns
+      #   another SafeBuffer, while `chars.first` returns a plain String. This can
+      #   change the HTML-safety of the result.
+      #
       # @example
       #   # bad
       #   str.chars[0..2]

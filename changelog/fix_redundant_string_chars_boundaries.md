@@ -1,0 +1,1 @@
+* [#471](https://github.com/rubocop/rubocop-performance/issues/471): Preserve nil range results and integer slice results in `Performance/RedundantStringChars`, and mark the cop unsafe for String subclasses. ([@thomasklemm][])

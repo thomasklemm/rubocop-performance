@@ -272,6 +272,7 @@ Performance/RedundantStringChars:
   Description: 'Checks for redundant `String#chars`.'
   Enabled: 'pending'
   VersionAdded: '1.7'
+  VersionChanged: '<<next>>'
 
 Performance/RegexpMatch:
   Description: >-

@@ -1775,7 +1775,7 @@ a deterministic regexp to a string.
 | Yes
 | Always
 | 1.7
-| -
+| <<next>>
 |===
 
 Checks for redundant `String#chars`.
@@ -1791,7 +1791,7 @@ str.chars.slice(0..2)
 str.chars.last
 
 # good
-str[0..2].chars
+str[0..2]&.chars
 
 # bad
 str.chars.first
@@ -1799,7 +1799,7 @@ str.chars.first(2)
 
 # good
 str[0]
-str[0...2].chars
+str[0, 2].chars
 str[-1]
 
 # bad
@@ -1809,7 +1809,7 @@ str.chars.size
 str.chars.empty?
 
 # good
-str[0...2].chars
+str[0, 2].chars
 str.length
 str.size
 str.empty?
